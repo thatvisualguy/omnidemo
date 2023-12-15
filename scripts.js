@@ -1,4 +1,4 @@
-// Toggle navigation menu
+// Toggle navigation bar
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const sidenav = document.querySelector('.sidenav');
 const element = document.getElementById("w3-container");
@@ -10,24 +10,7 @@ hamburgerMenu.addEventListener('click', () => {
   element.classList.toggle('active');
 });
 
-/*// Fetch image data from JSON file
-fetch('https://raw.githubusercontent.com/thatvisualguy/json_files/main/images.json')
-    .then(response => response.json())
-    .then(data => {
-        // Get the image grid element
-        const imageGrid = document.querySelector('.image-grid');
-
-        // Loop through each image data
-        data.forEach((image, index) => {
-            // Create a new image element
-            const img = document.createElement('img');
-            img.src = image.url;
-
-            // Add the image element to the grid
-            imageGrid.appendChild(img);
-        });
-    });*/
-
+//Display the images in grid
 const fetchData = async () => {
     const response = await fetch('https://raw.githubusercontent.com/thatvisualguy/json_files/main/images.json');
     data = await response.json();
@@ -48,8 +31,17 @@ const displayImages = (startIndex, endIndex, imageData = data) => {
         imgElement.src = image.url; // Change 'source' to 'url'
         imgElement.alt = image.tag;
         imgElement.className = 'image';
-        imageContainer.appendChild(imgElement);
-
+        imageContainer.appendChild(imgElement);      
+      
+        const rect = document.createElement('div');
+        rect.className = 'image_rect';
+        imageContainer.appendChild(rect); 
+        
+        const h2Element = document.createElement('h2');
+        h2Element.innerHTML = image.tag;
+        h2Element.className = 'image_tag';
+        imageContainer.appendChild(h2Element);
+        
         const downloadButton = document.createElement('input');
         downloadButton.type = 'image';
         downloadButton.src= "https://img.icons8.com/material-rounded/24/download--v1.png" ;
@@ -69,6 +61,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         displayImages(0, 15, data);
 });
 
+
+//Download the images
 const downloadImage = async (url) => {
     try {
         const response = await fetch(url);
@@ -89,3 +83,35 @@ const downloadImage = async (url) => {
         console.error('Error downloading image:', error);
     }
 };
+
+
+//Filter the images
+const resetButton = document.getElementById('resetButton');
+
+resetButton.addEventListener('click', () => {
+  displayImages(0, 15, data); // Display all images without filters
+});
+
+const filterButtons = document.querySelectorAll('#btn-bar button');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.textContent.toLowerCase(); // Assuming button text is the filter
+    filterImagesByTag(filter);
+  });
+});
+
+const filterImagesByTag = (tag) => {
+  const filteredData = data.filter(image => image.tag.toLowerCase() === tag);
+  displayImages(0, 15, filteredData);
+};
+
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
