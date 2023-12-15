@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website with Hamburger Menu and Navigation</title>
+  <title>Omni Demo</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
   <div>
     <header class="w3-top">
       <a class="hamburger-menu w3-display-left" style="display: inline-block;">☰</a>
-      <span class="brand-name w3-display-left">My Awesome Website</span>
+      <span class="brand-name w3-display-left">Omni Demo</span>
+      <nav class="header-nav w3-display-right">
+        <button class="button w3-round-xxlarge w3-border w3-border-black">Brand Guide</button>
+        <button class="button w3-round-xxlarge w3-border w3-border-black">All assets</button>
+      </nav>
     </header>
     <nav class="sidenav">
       <ul class="nav-list">
         <li class="nav-item"><a href="#">Home <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/home.png" alt="home" /></a></li>
-        <li class="nav-item"><a href="#">Instagram <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/instagram-new.png" alt="instagram-new" /></a></li>
+        <li class="nav-item" onclick="myAccFunc()"><a>Social<span class="fa fa-angle-down" style="padding-left:5px"></span><img width="28" height="28" src="https://img.icons8.com/ios-filled/20/ffffff/globe--v1.png" alt="home" /></a></li>
+        <div id="demoAcc" class="w3-hide">
+        <li class="nav-item" style="padding-left:21px"><a href="#">Instagram <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/instagram-new.png" alt="instagram-new" /></a></li>
+        <li class="nav-item" style="padding-left:21px"><a href="#">Facebook <img width="28" height="28" src="https://img.icons8.com/material-rounded/20/ffffff/facebook.png" /></a></li> </div>
         <li class="nav-item"><a href="#">About <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/about.png" alt="about" /></a></li>
         <li class="nav-item"><a href="#">Contact <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
       </ul>
@@ -30,15 +36,19 @@
 
       <div class="w3-bar w3-padding" id="btn-bar">
         <h5 style="font-weight:bold"> Filters</h5>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Basic</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Gradient</button>
+        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Flowers</button>
+        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Food</button>
         <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Container</button>
         <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Texture</button>
         <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Effects</button>
         <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Animation</button>
+        <button class="w3-button w3-round-xxlarge w3-border w3-border-black" id="resetButton">Reset</button>
       </div>
       <div class="w3-container" id="w3-container">
         <div class="image-grid" id="image-grid"> </div>
+      </div>
+      <div class="svgAnimations">
+        <img src="file:///C:/Users/20034124/Downloads/brandmark-assets/demo/logo-files/animation/blob.svg" alt="Animation">
       </div>
   </div>
   </main>
