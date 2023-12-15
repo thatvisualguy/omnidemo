@@ -178,7 +178,7 @@ header {
   top: 60px;
   left: -165px;
   transition: left 0.3s ease-in-out;
-  overflow-y:auto;
+  overflow-y:scroll;
 }
 
 .sidenav.active {
