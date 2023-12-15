@@ -86,12 +86,6 @@ const downloadImage = async (url) => {
 
 
 //Filter the images
-const resetButton = document.getElementById('resetButton');
-
-resetButton.addEventListener('click', () => {
-  displayImages(0, 15, data); // Display all images without filters
-});
-
 const filterButtons = document.querySelectorAll('#btn-bar button');
 
 filterButtons.forEach(button => {
@@ -106,8 +100,19 @@ const filterImagesByTag = (tag) => {
   displayImages(0, 15, filteredData);
 };
 
+//Sidebar accordion
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myAccFunc1() {
+  var x = document.getElementById("demoAcc1");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
 
