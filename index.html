@@ -13,36 +13,47 @@
 <body>
   <div>
     <header class="w3-top">
-      <a class="hamburger-menu w3-display-left" style="display: inline-block;">☰</a>
-      <span class="brand-name w3-display-left">Omni Demo</span>
+      <a class="hamburger-menu w3-display-left" style="display: inline-block; color:#ffffff">☰</a>
+      <span class="brand-name w3-display-left" style="color:#fffff">Omni Demo</span>
       <nav class="header-nav w3-display-right">
-        <button class="button w3-round-xxlarge w3-border w3-border-black">Brand Guide</button>
-        <button class="button w3-round-xxlarge w3-border w3-border-black">All assets</button>
+        <button class="w3-button w3-white w3-round-xxlarge w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Brand Guide</button>
+        <button class="w3-button w3-white w3-round-xxlarge w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">All assets</button>
       </nav>
     </header>
     <nav class="sidenav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#">Home <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/home.png" alt="home" /></a></li>
-        <li class="nav-item" onclick="myAccFunc()"><a>Social<span class="fa fa-angle-down" style="padding-left:5px"></span><img width="28" height="28" src="https://img.icons8.com/ios-filled/20/ffffff/globe--v1.png" alt="home" /></a></li>
+        <li class="nav-item"><a href="#">Logo Files <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/home.png" alt="home" /></a></li>
+        <li class="nav-item" onclick="myAccFunc()"><a>Profile<span class="fa fa-angle-down" style="padding-left:5px"></span><img width="28" height="28" src="https://img.icons8.com/ios-filled/20/ffffff/globe--v1.png" alt="home" /></a></li>
         <div id="demoAcc" class="w3-hide">
-        <li class="nav-item" style="padding-left:21px"><a href="#">Instagram <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/instagram-new.png" alt="instagram-new" /></a></li>
-        <li class="nav-item" style="padding-left:21px"><a href="#">Facebook <img width="28" height="28" src="https://img.icons8.com/material-rounded/20/ffffff/facebook.png" /></a></li> </div>
-        <li class="nav-item"><a href="#">About <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/about.png" alt="about" /></a></li>
-        <li class="nav-item"><a href="#">Contact <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+          <li class="nav-item" style="padding-left:25px"><a href="#">Icons <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/instagram-new.png" alt="instagram-new" /></a></li>
+          <li class="nav-item" style="padding-left:25px"><a href="#">Full Logos <img width="28" height="28" src="https://img.icons8.com/material-rounded/20/ffffff/facebook.png" /></a></li>
+        </div>
+        <li class="nav-item"><a href="#">Brand Guidelines <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/about.png" alt="about" /></a></li>
+        <li class="nav-item"><a href="#">Mockups <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Business Cards <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Letterheads <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Presentations <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Invoice <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item" onclick="myAccFunc1()"><a>Social Media<span class="fa fa-angle-down" style="padding-left:5px"></span><img width="28" height="28" src="https://img.icons8.com/ios-filled/20/ffffff/globe--v1.png" alt="home" /></a></li>
+        <div id="demoAcc1" class="w3-hide">
+          <li class="nav-item" style="padding-left:25px"><a href="#">Facebook <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/instagram-new.png" alt="instagram-new" /></a></li>
+          <li class="nav-item" style="padding-left:25px"><a href="#">Instagram <img width="28" height="28" src="https://img.icons8.com/material-rounded/20/ffffff/facebook.png" /></a></li>
+        </div>
+        <li class="nav-item"><a href="#">Gradients <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Backgrounds <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
+        <li class="nav-item"><a href="#">Illustrations <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/ffffff/contact-card.png" alt="contact-card" /></a></li>
       </ul>
     </nav>
 
     <main>
-
       <div class="w3-bar w3-padding" id="btn-bar">
         <h5 style="font-weight:bold"> Filters</h5>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Flowers</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Food</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Container</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Texture</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Effects</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black">Animation</button>
-        <button class="w3-button w3-round-xxlarge w3-border w3-border-black" id="resetButton">Reset</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Flowers</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Food</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Container</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Texture</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Effects</button>
+        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Animation</button>
       </div>
       <div class="w3-container" id="w3-container">
         <div class="image-grid" id="image-grid"> </div>
