@@ -92,6 +92,13 @@ filterButtons.forEach(button => {
   button.addEventListener('click', () => {
     const filter = button.textContent.toLowerCase(); // Assuming button text is the filter
     filterImagesByTag(filter);
+    
+    filterButtons.forEach(b => {
+      b.style.backgroundColor = '';
+      b.style.color = '';
+    });
+    button.style.backgroundColor = '#d10754';
+    button.style.color = 'white';
   });
 });
 
