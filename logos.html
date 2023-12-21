@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="styles_logos.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 
 <body>
   <div>
     <header class="w3-top">
       <a class="hamburger-menu w3-display-left" style="display: inline-block; color:#ffffff">☰</a>
-      <span class="brand-name w3-display-left" style="color:#fffff">Omni Demo</span>
+      <span class="brand-name w3-display-left" style="color:#fffff;"><a href="https://thatvisualguy.github.io/omnidemo/" style="text-decoration:none;">Omni Demo</a></span>
       <nav class="header-nav w3-display-right">
         <button class="w3-button w3-white w3-round-xxlarge w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Brand Guide</button>
         <button class="w3-button w3-white w3-round-xxlarge w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">All assets</button>
@@ -22,7 +23,7 @@
     </header>
     <nav class="sidenav">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#">Logo Files <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/ffffff/gallery.png" alt="gallery"/></a></li>
+        <li class="nav-item" style="background-color: #d10754"><a href="#">Logo Files <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/ffffff/gallery.png" alt="gallery"/></a></li>
         <li class="nav-item" onclick="myAccFunc()"><a>Profile<span class="fa fa-angle-down" style="padding-left:5px"></span><img width="24" height="24" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/ffffff/external-user-web-and-seo-tanah-basah-basic-outline-tanah-basah.png" alt="external-user-web-and-seo-tanah-basah-basic-outline-tanah-basah"/></a></li>
         <div id="demoAcc" class="w3-hide">
           <li class="nav-item" style="padding-left:25px"><a href="#">Icons <img width="24" height="24" src="https://img.icons8.com/ios/24/ffffff/star--v1.png" alt="star--v1"/></a></li>
@@ -55,12 +56,12 @@
     <main>
       <div class="w3-bar w3-padding" id="btn-bar">
         <h5 style="font-weight:bold"> Filters</h5>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Flowers</button>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Food</button>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Container</button>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Texture</button>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Effects</button>
-        <button class="w3-button w3-round-xxlarge w3-hover-white" style="border: 1px solid #000000; color: #000000">Animation</button>
+        <button class="w3-button w3-round-xxlarge my-button">Flowers</button>
+        <button class="w3-button w3-round-xxlarge my-button">Food</button>
+        <button class="w3-button w3-round-xxlarge my-button">Nature</button>
+        <button class="w3-button w3-round-xxlarge my-button">Abstract</button>
+        <button class="w3-button w3-round-xxlarge my-button">Animals</button>
+        <button class="w3-button w3-round-xxlarge my-button">Travel</button>
       </div>
       <div class="w3-container" id="w3-container">
         <div class="image-grid" id="image-grid"> </div>
@@ -68,7 +69,7 @@
   </div>
   </main>
 
-  <script src="scripts_logos.js"></script>
+  <script src="scripts-logos.js"></script>
 </body>
 
 </html>
