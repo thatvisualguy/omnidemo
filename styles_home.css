@@ -1,7 +1,6 @@
 /*Root files*/
 body {
   font-family: Arial, sans-serif;
-  padding-top: 60px;
   background-color: #eeeeee;
 }
 
@@ -14,29 +13,42 @@ header {
   font-family: "Poppins";
 }
 
+/*top-blob*/
+.top-blob{
+  transform: scale(0.3);
+}
+
+
+.blob{
+
+}
+
 /*header*/
 .brand-name {
   margin-left: 40px;
 }
 
-#nav {
-  width: 250px;
-  padding-top: 60px;
+.w3-display-right {
+  display: flex;
 }
 
 .w3-button {
-  display: flex;
-  flex-wrap: wrap;
   margin: 6px;
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 0px white;
 }
 
-.w3-button:hover {
+.header-nav .w3-button:hover {
   box-shadow: 0px 3px #000000;
+  background-color: #d10754 !important;
+  color: white;
 }
 
-.w3-button:active {
+.header-nav .w3-button:hover img{
+  filter: brightness(0) invert(1);
+}
+
+.header-nav .w3-button:active {
   transform: translate(0px, 3px);
   box-shadow: 0px 0px white;
 }
@@ -132,9 +144,10 @@ a {
 
 /*Hero section*/
 .hero-section {
+    padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
-height: 80vh;
+height: auto;
 }
 
 .hero-column {
@@ -184,20 +197,23 @@ height: 80vh;
   justify-content: center;
   align-items: center;
 width: 100%;
+  overflow: hidden;
 }
 
 #hero-img {
+  
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
   height: auto;
+  transform: scale(0.8);
 }
 
 /*About brand section*/
 #about-section {
   position: relative;
-  display: flex;
+  display: block;
   align-item: center;
   justify-content: center;
   margin: 15px 25px 15px 25px;
@@ -231,20 +247,7 @@ width: 100%;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-}
-@media (max-width: 1000px) {
-  .button-group {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-   transform: scale(0.8);
-  }
-}
-
-@media (max-width: 800px) {
-  .button-group {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
+   margin-top: 50px;
 }
 
 .btn-group {
@@ -366,22 +369,44 @@ width: 100%;
 
 /*Mockup-Carousel*/
 .carousel-container {
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: #16243d;
-  padding-bottom: 100px;
 }
 
 #mockup-carousel {
   width: 100%;
-  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   overflow: hidden;
   border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 #mockup-carousel img {
   object-fit: cover;
-  width: 100%;
+  width: 80%;
   border-radius: inherit;
+   align-items: center;
+  justify-content: center;
+}
+
+/*Bottom download Links*/
+.w3-display-center{
+  display: none;
+}
+
+#bottom-download-links{
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+#bottom-download-links .w3-button:hover span{
+  color: white;
 }
 
 /*Footer*/
@@ -395,4 +420,25 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .button-group {
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column for smaller screens */
+  }
+  .btn {
+    width: 100%; /* Make buttons take up full width */
+    margin-bottom: 15px; /* Add some space between buttons */
+  }
+   .top-blob svg{
+    display: none;
+  }
+  
+  .w3-display-center{
+  display: flex;
+  }
+  
+  .w3-display-right {
+  display: none;
+  }
 }
